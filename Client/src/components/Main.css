@@ -1,0 +1,373 @@
+žjjujbody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .task-management-system {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #000000;
+  }
+  
+  .logout {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    margin-right: 2vh;
+    background-color: #cac6c6;
+    
+  }
+  
+  .board {
+    flex: 1;
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    background-color: #cac6c6;
+    margin: 10px;
+    border-radius: 5px;
+    color: #000000;
+
+  }
+  
+  .column h2 {
+    margin-top: 0;
+  }
+  
+  .tasks {
+    margin-bottom: 20px;
+  }
+  
+  .task {
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  
+  .input_box{
+    width: calc(80% );
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+
+  .main-modal {
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    width: 20%;
+    color: black;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  .modal-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .delete-btn{
+    color: white;
+    font-weight: 700;
+    margin-left: 20px;
+    background-color: red;
+  }
+
+
+  .search-box {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .search-box:focus {
+    border: 1px solid #007bff;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  .search-box::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  
+
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    background-color: #004494;
+    transform: scale(0.95);
+  }
+  
+  .button-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .button-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .button-secondary:active {
+    background-color: #444b50;
+  }
+  
+  .button-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .button-danger:hover {
+    background-color: #c82333;
+  }
+  
+  .button-danger:active {
+    background-color: #a71d2a;
+  }
+  
+
+
+  /* General task card styling */
+.task-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: grab;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+}
+
+.task-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2em;
+}
+
+.task-card p {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+.task-card .priority {
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Priority colors */
+.priority-low {
+  background: #4caf50;
+}
+
+.priority-medium {
+  background: #ff9800;
+}
+
+.priority-high {
+  background: #f44336;
+}
+
+.task-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.button-secondary {
+  background: #03a9f4;
+  color: white;
+}
+
+.button-danger {
+  background: #f44336;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Input box styles */
+.input_box {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Task form styling */
+.task-form {
+  margin-top: 20px;
+}
+
+/* Column Styling */
+.column {
+  flex: 1;
+  background: #f4f4f9;
+  margin: 0 8px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  font-size: 1.2em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1em;
+}
+
+
+.task-form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus,
+.task-form button:hover {
+  border-color: #007bff;
+}
+
+.task-form input[type="date"] {
+  cursor: pointer;
+}
+
+.task-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.task-form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.task-form select {
+  background-color: #fff;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
+  color: #aaa;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  font-family: 'Arial', sans-serif;
+}
+
